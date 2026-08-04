@@ -2,7 +2,7 @@
 
 An AI-powered Interview Practice Chatbot built using **Python**, **Streamlit**, **LangChain**, and **Google Gemini**. The application simulates a technical interview by generating topic-specific interview questions, evaluating user responses, providing structured feedback, and supporting context-aware follow-up conversations.
 
-This project is designed as a beginner-friendly end-to-end conversational AI application for learning Large Language Model (LLM) application development.
+This project demonstrates the development of an AI-powered interview practice application using Streamlit, LangChain, and Google Gemini. It generates interview questions, evaluates user responses, provides structured feedback, and supports context-aware follow-up conversations.
 
 ---
 
