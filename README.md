@@ -1,57 +1,208 @@
-# 🎯 Interview Practice Bot
+# 🎯 AI Interview Practice Chatbot
 
-A beginner-friendly AI chatbot that helps you practice technical interviews on Python and GenAI topics.
+An AI-powered Interview Practice Chatbot built using **Python**, **Streamlit**, **LangChain**, and **Google Gemini**. The application simulates a technical interview by generating topic-specific interview questions, evaluating user responses, providing structured feedback, and supporting context-aware follow-up conversations.
 
-## Features
+This project is designed as a beginner-friendly end-to-end conversational AI application for learning Large Language Model (LLM) application development.
 
-- Choose from **Python**, **GenAI Fundamentals**, **RAG**, and **AI Agents** topics
-- Get AI-generated interview questions on demand
-- Submit answers and receive structured feedback — score, what was correct, what was missed, and a model answer
-- Ask follow-up questions with full conversation memory
-- Click **New Question** anytime to reset and start fresh
+---
 
-## Setup
+## 🚀 Features
 
-**1. Install dependencies**
+- Select an interview topic before starting a session
+- AI-generated interview questions
+- Chat-based interview experience
+- Automatic answer evaluation
+- Structured feedback including:
+  - ⭐ Score (Out of 5)
+  - ✅ What was Correct
+  - ❌ What was Missed
+  - 📖 Model Answer
+- Context-aware follow-up conversations
+- Session reset using **New Question**
+- Conversation memory using Streamlit Session State
+
+---
+
+## 📚 Supported Topics
+
+- Python
+- GenAI Fundamentals
+- Retrieval-Augmented Generation (RAG)
+- AI Agents
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Programming Language | Python |
+| UI Framework | Streamlit |
+| LLM Framework | LangChain |
+| LLM Provider | Google Gemini |
+| Environment Variables | python-dotenv |
+
+---
+
+## 📂 Project Structure
+
+```text
+interview-bot/
+│
+├── app.py
+├── agent.py
+├── prompts.py
+├── requirements.txt
+├── README.md
+└── .env
+```
+
+> **Note:** The `.env` file stores your API key and should never be committed to GitHub.
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Kumari1806/Interview-Practice-Chatbot.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd Interview-Practice-Chatbot/interview-bot
+```
+
+### 3. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+### 4. Activate the virtual environment
+
+**Windows**
+
+```bash
+.venv\Scripts\activate
+```
+
+### 5. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-**2. Add your Gemini API key**
+### 6. Configure your API Key
 
-Open `.env` and replace the placeholder:
-```
-GOOGLE_API_KEY=your_actual_key_here
-```
-Get a free key at [Google AI Studio](https://aistudio.google.com/app/apikey).
+Create a `.env` file inside the project directory.
 
-**3. Run the app**
+```env
+GOOGLE_API_KEY=YOUR_API_KEY
+```
+
+You can obtain a free API key from **Google AI Studio**.
+
+### 7. Run the application
+
 ```bash
 streamlit run app.py
 ```
 
-The app opens in your browser at `http://localhost:8501`.
+The application will open in your browser.
 
-## Project Structure
+---
 
+## 💬 Application Workflow
+
+```text
+Select Topic
+      │
+      ▼
+AI Generates Interview Question
+      │
+      ▼
+User Submits Answer
+      │
+      ▼
+AI Evaluates Response
+      │
+      ▼
+Score + Feedback + Model Answer
+      │
+      ▼
+Follow-up Questions (Conversation Memory)
+      │
+      ▼
+New Question / New Session
 ```
-interview-bot/
-├── app.py          # Streamlit UI and app flow
-├── agent.py        # LangChain + Gemini API calls
-├── prompts.py      # All prompt templates
-├── .env            # Your API key — never commit this
-├── requirements.txt
-└── README.md
-```
 
-## How It Works
+---
+
+## ⚙️ How It Works
 
 | File | Responsibility |
-|---|---|
-| `prompts.py` | Three prompt templates: question generation, answer scoring, follow-up |
-| `agent.py` | `generate_question()`, `score_answer()`, `handle_followup()` — each is a direct LangChain model call |
-| `app.py` | Streamlit UI, `st.session_state` management, and routing between scoring vs. follow-up mode |
+|------|----------------|
+| `prompts.py` | Contains prompt templates for question generation, answer evaluation, and follow-up conversations |
+| `agent.py` | Handles Gemini model initialization, LangChain interactions, question generation, answer scoring, and follow-up responses |
+| `app.py` | Manages the Streamlit user interface, session state, chat history, and overall application workflow |
 
-## Model
+---
 
-Uses `gemini-2.5-flash-lite` via `langchain-google-genai`. To swap to a different model, change the `model=` value in `agent.py → get_model()`.
+## 🧠 AI Model
+
+This project uses:
+
+- **Google Gemini**
+- **Model:** `gemini-2.5-flash-lite`
+- **Framework:** `langchain-google-genai`
+
+To use another Gemini model, update the model name inside `agent.py`.
+
+---
+
+## 📖 Concepts Demonstrated
+
+- Large Language Models (LLMs)
+- LangChain Integration
+- Prompt Engineering
+- Conversational AI
+- Streamlit Chat Interface
+- Session State Management
+- Conversation Memory
+- AI-based Answer Evaluation
+
+---
+
+## 🔮 Future Enhancements
+
+- Difficulty level selection
+- Interview history export
+- RAG-powered interview question bank
+- Additional interview domains
+- Cloud deployment
+- Enhanced memory strategies
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+Feel free to fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is intended for educational and learning purposes.
+
+---
+
+## 👩‍💻 Author
+
+**Ahana**
+
+Built as part of my journey in learning Generative AI, LangChain, and end-to-end LLM application development.
