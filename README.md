@@ -185,24 +185,4 @@ To use another Gemini model, update the model name inside `agent.py`.
 - Cloud deployment
 - Enhanced memory strategies
 
----
 
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-Feel free to fork the repository and submit a pull request.
-
----
-
-## 📄 License
-
-This project is intended for educational and learning purposes.
-
----
-
-## 👩‍💻 Author
-
-**Ahana**
-
-Built as part of my journey in learning Generative AI, LangChain, and end-to-end LLM application development.
